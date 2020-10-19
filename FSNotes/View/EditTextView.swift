@@ -383,7 +383,7 @@ class EditTextView: NSTextView, NSTextFinderClient {
         let distance = string.distance(from: storageString.startIndex, to: to)
 
         if let result = isBetweenBraces(location: distance) {
-            let titles = storage.getFuzzyTitles(by: result.0).filter({ $0.count > 0 }).filter({ $0 != result.0
+            let titles = storage.getFuzzyFileNames(by: result.0).filter({ $0.count > 0 }).filter({ $0 != result.0
 
             }).sorted()
 
